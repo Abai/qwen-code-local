@@ -1,4 +1,5 @@
 {
   "selectedAuthType": "openai",
-  "usageStatisticsEnabled": false
+  "usageStatisticsEnabled": false,
+  "sessionTokenLimit": -1
 }
