@@ -32,7 +32,7 @@ The Qwen Code Local Development Environment is designed to provide a self-contai
 The Docker image is built from `Dockerfile` and includes:
 
 - llama.cpp server
-- Node.js and npm for Claude Code
+- Node.js and npm for Qwen Code
 - Python dependencies for Hugging Face Hub access
 - Developer user with appropriate permissions
 
@@ -100,10 +100,3 @@ If you encounter issues:
 2. Check that you have sufficient disk space for the model (~10GB)
 3. Verify network connectivity during initial model download
 4. Make sure you're running with appropriate permissions
-
-## Requirements
-
-- Docker Engine (version 20.10 or higher)
-- At least 10GB of free disk space for the model
-- For GPU acceleration: NVIDIA GPU with CUDA support and nvidia-docker2
-- Internet connection for initial model download (subsequent runs can be offline)
