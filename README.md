@@ -99,6 +99,6 @@ The Dockerfile sets various environment variables for optimal performance:
 
 If you encounter issues:
 1. Ensure Docker is installed and running
-2. Check that you have sufficient disk space for the model (~10GB)
+2. Check that you have sufficient disk space for the model (~18GB)
 3. Verify network connectivity during initial model download
 4. Make sure you're running with appropriate permissions
