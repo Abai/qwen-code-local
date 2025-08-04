@@ -46,6 +46,8 @@ Uses the Qwen3-Coder-30B-A3B-Instruct model (quantized to Q4_K_XL) from Hugging 
 2. `run.sh` - Runs the container with host networking
 3. `run_offline.sh` - Runs the container with no network access
 4. `test_openai.sh` - Tests that the API is working correctly
+5. `view_llama_server.sh` - Opens a terminal session to the running llama.cpp server container
+   To detach from the tmux session, press `Ctrl-b` followed by `d`
 
 ## Usage
 
