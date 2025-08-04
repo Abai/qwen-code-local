@@ -17,7 +17,7 @@ RUN python3 -m pip install --no-cache-dir -U huggingface_hub hf_transfer
 # Install Claude Code
 RUN curl -fsSL https://deb.nodesource.com/setup_24.x | bash - \
     && apt-get install -y nodejs \
-    && npm install -g @qwen-code/qwen-code@latest \
+    && npm install -g @qwen-code/qwen-code@latest tiktoken \
     && apt autoremove -y \
     && apt clean -y \
     && rm -rf /tmp/* /var/tmp/* \
@@ -77,6 +77,13 @@ ENV OPENAI_MODEL="$HF_MODEL"
 COPY --chown=developer:developer entrypoint.sh /home/developer/entrypoint.sh
 COPY --chown=developer:developer hf_download.py /home/developer/hf_download.py
 COPY --chown=developer:developer test_openai.sh /home/developer/test_openai.sh
+
+# Required to make tiktoken tokenizer to work offline
+ARG TIKTOKEN_URL="https://openaipublic.blob.core.windows.net/encodings/cl100k_base.tiktoken"
+ENV TIKTOKEN_CACHE_DIR="/home/developer/.tiktoken/"
+ADD --chown=developer:developer $TIKTOKEN_URL $TIKTOKEN_CACHE_DIR/9b5ad71b2ce5302211f9c61530b329a4922fc6a4
+
+# Disables google telemetry
 COPY --chown=developer:developer settings.json /home/developer/.qwen/
 
 ENTRYPOINT [ "/home/developer/entrypoint.sh" ]
