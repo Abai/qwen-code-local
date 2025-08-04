@@ -55,11 +55,13 @@ ENV LLAMA_LOG_PREFIX=1
 
 # Config for loaded llama.cpp model
 ENV LLAMA_ARG_MODEL="/home/developer/models/$HF_REPO_ID/$HF_MODEL"
-ENV LLAMA_ARG_CTX_SIZE=40960
-ENV LLAMA_ARG_N_PREDICT=32768
+ENV LLAMA_ARG_CTX_SIZE=98274
+ENV LLAMA_ARG_N_PREDICT=-1
 ENV LLAMA_ARG_N_GPU_LAYERS=49
 ENV LLAMA_ARG_NO_CONTEXT_SHIFT=1
 ENV LLAMA_ARG_FLASH_ATTN=1
+ENV LLAMA_ARG_CACHE_TYPE_K=q8_0
+ENV LLAMA_ARG_CACHE_TYPE_V=q8_0
 ENV LLAMA_ARG_SPLIT_MODE=row
 ENV LLAMA_SAMPLING_TEMPERATURE=0.7
 ENV LLAMA_SAMPLING_MIN_P=0
@@ -75,5 +77,6 @@ ENV OPENAI_MODEL="$HF_MODEL"
 COPY --chown=developer:developer entrypoint.sh /home/developer/entrypoint.sh
 COPY --chown=developer:developer hf_download.py /home/developer/hf_download.py
 COPY --chown=developer:developer test_openai.sh /home/developer/test_openai.sh
+COPY --chown=developer:developer settings.json /home/developer/.qwen/
 
 ENTRYPOINT [ "/home/developer/entrypoint.sh" ]

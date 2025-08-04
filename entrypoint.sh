@@ -22,4 +22,4 @@ sleep 3
 tmux send-keys -t llama-server C-c
 echo 'Shutting down llama-server ...'
 sleep 2
-tmux send-keys -t llama-server C-d
+tmux kill-session -t llama-server
