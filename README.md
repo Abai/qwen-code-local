@@ -4,7 +4,7 @@ This project provides a Docker-based local development environment for running Q
 
 ## Overview
 
-The Qwen Code Local Development Environment is designed to provide a self-contained, offline-capable solution for code generation using the Qwen3-Coder-30B-A3B-Instruct model. It leverages Docker to create a consistent environment that can be run on various systems.
+The Qwen Code Local Development Environment runs the Qwen3-Coder-30B-A3B-Instruct model using Docker. It provides an OpenAI-compatible API for code generation tasks.
 
 ## Key Features
 
