@@ -16,7 +16,7 @@ The Qwen Code Local Development Environment runs the Qwen3-Coder-30B-A3B-Instruc
 ## Requirements
 
 - Docker Engine (version 20.10 or higher)
-- At least 10GB of free disk space for the model
+- At least 18GB of free disk space for the model
 - For GPU acceleration: NVIDIA GPU with CUDA support and nvidia-docker2
 - Internet connection for initial model download (subsequent runs can be offline)
 
