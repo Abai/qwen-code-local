@@ -1,5 +1,6 @@
 {
   "selectedAuthType": "openai",
   "usageStatisticsEnabled": false,
-  "sessionTokenLimit": -1
+  "sessionTokenLimit": -1,
+  "theme": "ANSI"
 }
